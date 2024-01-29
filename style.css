@@ -1,0 +1,102 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* Main */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #171717;
+    color: #fff;
+    font-weight: 400;
+}
+
+.QuickInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.QuickInfo > #time {
+    font-size: 64px;
+}
+
+.QuickInfo > #info {
+    color: #6A6600;
+    font-size: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.QuickInfo > #info::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #6A6600;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.QuickInfo > #info:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.QuickLaunch {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.shortcut:nth-child(n+1):nth-child(-n+8) {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.shortcut img {
+    max-width: 80%; /* Adjust as needed */
+    max-height: 80%; /* Adjust as needed */
+}
+
+.shortcut:nth-child(n+1):nth-child(-n+8):hover {
+    background-color: #6A6600;
+    cursor: pointer;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    width: 430px; /* Set the width of the box */
+    height: 230px; /* Set the height of the box */
+    border-radius: 5px; /* Add a border radius */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+}
